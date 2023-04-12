@@ -1,11 +1,9 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-#[https://blog.developerdao.com/](https://blog.developerdao.com/how-to-build-a-full-stack-nft-marketplace).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`]
+(https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ### Step 1: Set up an NFT Marketplace in Thirdweb + point the app to the right place
 You can use the config in here by default (Goerli, pointing to a marketplace contract I made on Thirdweb), but if you want to use your own,
-you can change the `targetChainId` in `config/targetChain.ts` (checkout the definition of Thirdweb's [ChainId](https://github.com/thirdweb-dev/react/blob/77e30702d7938723486453e7383257028ed18c98/src/constants/chain.ts) to see the supported values),
-and paste your contract marketplace contract address in `config/contractAddresses.ts`.
+you can change the `targetChainId` in `config/targetChain.ts` and paste your contract marketplace contract address in `config/contractAddresses.ts`.
 
 ### Step 2: Set up Alchemy
 You can skip this step to begin with, but you will need to set this to get the `api/collection` page functional.
@@ -14,26 +12,20 @@ Navigate over to the [Alchemy site](https://www.alchemy.com/) and set up a free 
 Grab the API key in your alchemy dashboard, stick it in the `.env.changeMe` file in the root directory, and rename the file to `.env.local`.
 Next.js is already hooked up to read variables out of `.env.local` so there should be nothing more you need to do.
 
-*** DO NOT *** commit your API key to you repository. You want to keep it private. `env.local` is .gitignore'd, so it will never be committed to your repository.
-Anytime you `git clone` the repository you will have to fill in this file again.
+You want to keep it private. `env.local` is .gitignore'd, so it will never be committed to your repository.
 
 ### Step 3: Start the server!
 First, install the dependencies:
-
 ```bash
 yarn install
 ```
-
 Next, run the development server:
-
 ```bash
 npm run dev
 # or
 yarn dev
 ```
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
 
 ## Deploy on Vercel
 
